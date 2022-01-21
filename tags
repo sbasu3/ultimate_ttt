@@ -1,0 +1,138 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Board	board.cpp	/^Board::Board(){$/;"	f	class:Board
+Board	board.cpp	/^Board::Board(const Board &B){$/;"	f	class:Board
+Board	board.h	/^class Board{$/;"	c
+CC	Makefile	/^CC=g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-c -Wall -std=c++1y -g -static$/;"	m
+COLS	utils.h	21;"	d
+DEPS	Makefile	/^DEPS=$(wildcard *.h)$/;"	m
+G	ultimateTTT.h	/^	GameState G;$/;"	m	class:TTTBot
+GameState	gameState.h	/^class GameState : public Board{$/;"	c
+LDFLAGS	Makefile	/^LDFLAGS=$/;"	m
+MACROCOLS	utils.h	23;"	d
+MACROROWS	utils.h	22;"	d
+MAX_SCORE	utils.h	25;"	d
+MacroState	utils.h	/^typedef std::array<std::array<Squares,MACROROWS>,MACROCOLS> MacroState;		\/\/Size of Board 3x3$/;"	t
+MiniState	utils.h	/^typedef std::array<std::array<Player,MACROROWS>,MACROCOLS>  MiniState;		\/\/Size of Board 3x3 ; only used for local compute$/;"	t
+Move	move.cpp	/^Move::Move(){$/;"	f	class:Move
+Move	move.cpp	/^Move::Move(const int8_t &x, const int8_t &y, const int8_t &macrocell){$/;"	f	class:Move
+Move	move.h	/^class Move{$/;"	c
+OBJECTS	Makefile	/^OBJECTS=$(SOURCES:%.cpp=%.o)$/;"	m
+Player	player.cpp	/^Player::Player(){$/;"	f	class:Player
+Player	player.cpp	/^Player::Player(int8_t c){$/;"	f	class:Player
+Player	player.h	/^class Player {$/;"	c
+ROWS	utils.h	20;"	d
+SOURCES	Makefile	/^SOURCES=$(wildcard *.cpp)$/;"	m
+Squares	squares.cpp	/^Squares::Squares(){$/;"	f	class:Squares
+Squares	squares.cpp	/^Squares::Squares(Player p){$/;"	f	class:Squares
+Squares	squares.cpp	/^Squares::Squares(int8_t c){$/;"	f	class:Squares
+Squares	squares.h	/^class Squares : public Player {$/;"	c
+State	utils.h	/^typedef std::array<std::array<Player,ROWS>,COLS>  State;				\/\/Size of Board 9x9$/;"	t
+TARGET	Makefile	/^TARGET=negamax-alpha-beta$/;"	m
+TTABLE_ENTRY_H	ttable_entry.h	2;"	d
+TTABLE_H	ttable.h	2;"	d
+TTABLE_SIZE	ttable.h	/^const int TTABLE_SIZE = 32768;$/;"	v
+TTTBOT_H	ultimateTTT.h	6;"	d
+TTTBot	ultimateTTT.h	/^class TTTBot {$/;"	c
+TTable	ttable.h	/^class TTable$/;"	c
+TTableEntry	ttable_entry.cpp	/^TTableEntry::TTableEntry()$/;"	f	class:TTableEntry
+TTableEntry	ttable_entry.cpp	/^TTableEntry::TTableEntry(std::size_t hash, int a, int b, int value, bool valid)$/;"	f	class:TTableEntry
+TTableEntry	ttable_entry.h	/^class TTableEntry$/;"	c
+UTILS_H	utils.h	5;"	d
+ValidMove	move.cpp	/^bool Move::ValidMove(void){$/;"	f	class:Move
+__BOARD	board.h	2;"	d
+__GAMESTATE	gameState.h	2;"	d
+__MOVE	move.h	2;"	d
+__NEGAMAX	negamax.h	2;"	d
+__PLAYER	player.h	2;"	d
+__SQUARES	squares.h	2;"	d
+__major	board.h	/^  MacroState __major;$/;"	m	class:Board
+__mini	board.h	/^  MiniState __mini;$/;"	m	class:Board
+__state	board.h	/^  State __state;$/;"	m	class:Board
+_string_state	board.h	/^  std::string _string_state;$/;"	m	class:Board
+a	ttable_entry.h	/^    int a;$/;"	m	class:TTableEntry
+b	ttable_entry.h	/^    int b;$/;"	m	class:TTableEntry
+check_for_win	utils.cpp	/^bool check_for_win(const MiniState &mini ,const  Move &m ,const Player &currentPlayer){$/;"	f
+color	player.h	/^        int8_t  color;     \/\/color can be -1,1,0 [un-occupied]$/;"	m	class:Player
+convert_to_ministate	utils.cpp	/^MiniState convert_to_ministate( MacroState major){$/;"	f
+cost	utils.cpp	/^int cost(const State &minor, const MacroState &major, const Player &p){$/;"	f
+currentHash	ultimateTTT.h	/^	std::size_t currentHash;$/;"	m	class:TTTBot
+currentPlayer	gameState.h	/^		Player currentPlayer;$/;"	m	class:GameState
+depth	ttable_entry.h	/^    int depth;$/;"	m	class:TTableEntry
+entries	ttable.cpp	/^TTableEntry TTable::entries[TTABLE_SIZE];$/;"	m	class:TTable	file:
+entries	ttable.h	/^    static TTableEntry entries[TTABLE_SIZE];$/;"	m	class:TTable
+evaluate	gameState.cpp	/^void GameState::evaluate(void){$/;"	f	class:GameState
+field_columns	ultimateTTT.h	/^	int field_columns;$/;"	m	class:TTTBot
+field_rows	ultimateTTT.h	/^	int field_rows;$/;"	m	class:TTTBot
+findBestMove	negamax.cpp	/^Move findBestMove(GameState G)$/;"	f
+getAllMoves	utils.cpp	/^std::vector<Move> getAllMoves(const MiniState &mini){$/;"	f
+getCol	move.h	/^		inline const int8_t getCol(void){return y;};$/;"	f	class:Move
+getColor	player.h	/^        const inline int8_t getColor(void){ return color;};$/;"	f	class:Player
+getCurrentPlayer	gameState.h	/^		inline Player getCurrentPlayer(void){ return currentPlayer;};$/;"	f	class:GameState
+getHash	board.cpp	/^std::size_t Board::getHash(){$/;"	f	class:Board
+getMacro	move.h	/^		inline int8_t getMacro(void){return macrocell;};$/;"	f	class:Move
+getMacroCells	board.cpp	/^std::vector<int> Board::getMacroCells(){								\/\/Return playable macro cells$/;"	f	class:Board
+getMoves	board.cpp	/^std::vector<Move> Board::getMoves(void)														\/\/Get all Legal moves$/;"	f	class:Board
+getRow	move.h	/^		inline const int8_t getRow(void){return x;};$/;"	f	class:Move
+getScore	gameState.cpp	/^int GameState::getScore(){$/;"	f	class:GameState
+getWinner	board.cpp	/^Squares Board::getWinner()$/;"	f	class:Board
+get_hash	ttable_entry.cpp	/^std::size_t TTableEntry::get_hash()$/;"	f	class:TTableEntry
+get_small_state	utils.cpp	/^MiniState get_small_state(const State &minor, const int &major){$/;"	f
+get_value	ttable_entry.cpp	/^int TTableEntry::get_value()$/;"	f	class:TTableEntry
+hash	board.h	/^  std::size_t hash;$/;"	m	class:Board
+hash	ttable_entry.h	/^    std::size_t hash;$/;"	m	class:TTableEntry
+is_a_player	player.cpp	/^bool Player::is_a_player(void){$/;"	f	class:Player
+is_current_square	squares.cpp	/^bool Squares::is_current_square(void){$/;"	f	class:Squares
+is_empty	player.cpp	/^bool Player::is_empty(void){$/;"	f	class:Player
+is_valid	ttable_entry.cpp	/^bool TTableEntry::is_valid()$/;"	f	class:TTableEntry
+is_within_cutoff	ttable_entry.cpp	/^bool TTableEntry::is_within_cutoff(int alpha, int beta, int depth)$/;"	f	class:TTableEntry
+lookup	ttable.cpp	/^TTableEntry * TTable::lookup(std::size_t hash)$/;"	f	class:TTable
+macrocell	move.h	/^		int8_t macrocell;$/;"	m	class:Move
+main	main.cpp	/^int main() {$/;"	f
+make_move	gameState.cpp	/^bool GameState::make_move(Move m){$/;"	f	class:GameState
+move	ultimateTTT.cpp	/^void TTTBot::move(int timeout) {$/;"	f	class:TTTBot
+negamax	negamax.cpp	/^int negamax(GameState current_state, int depth, clock_t start_time, int alpha, int beta , Player currentPlayer)$/;"	f
+operator !=	move.cpp	/^bool operator !=(const Move &m , const Move &n){$/;"	f
+operator !=	player.cpp	/^bool operator !=(const Player &p , const Player &q ){$/;"	f
+operator !=	squares.cpp	/^bool operator !=(const Squares &s , const Squares &r){$/;"	f
+operator <<	move.cpp	/^std::ostream &operator<<(std::ostream& os, const Move &m) {$/;"	f
+operator =	move.cpp	/^Move Move::operator=(const Move &m){$/;"	f	class:Move
+operator =	player.cpp	/^Player Player::operator =(const Player &s){$/;"	f	class:Player
+operator =	player.cpp	/^Player Player::operator =(const int8_t &c){$/;"	f	class:Player
+operator =	squares.cpp	/^Squares Squares::operator =(Player s){$/;"	f	class:Squares
+operator ==	move.cpp	/^bool operator ==(const Move &m , const Move &n){$/;"	f
+operator ==	player.cpp	/^bool operator ==(const Player &p , const Player &q){$/;"	f
+operator ==	squares.cpp	/^bool operator ==(const Squares &s , const Squares &r){$/;"	f
+operator ~	player.cpp	/^Player operator ~(const Player &p){$/;"	f
+player_names	ultimateTTT.h	/^	std::string player_names[2];$/;"	m	class:TTTBot
+round	ultimateTTT.h	/^	int round;$/;"	m	class:TTTBot
+run	ultimateTTT.cpp	/^void TTTBot::run() {$/;"	f	class:TTTBot
+save_entry	ttable.cpp	/^void TTable::save_entry(TTableEntry entry)$/;"	f	class:TTable
+score	gameState.h	/^		int score;$/;"	m	class:GameState
+select_randomly	utils.h	/^Iter select_randomly(Iter start, Iter end) {$/;"	f
+select_randomly	utils.h	/^Iter select_randomly(Iter start, Iter end, RandomGenerator& g) {$/;"	f
+setCol	move.h	/^		inline void setCol(int8_t i){ y = i;};$/;"	f	class:Move
+setMajorStateFromString	board.cpp	/^void Board::setMajorStateFromString(std::string &major){$/;"	f	class:Board
+setRow	move.h	/^		inline void setRow(int8_t i){ x = i;};$/;"	f	class:Move
+setStateFromString	board.cpp	/^void Board::setStateFromString(std::string &minor){$/;"	f	class:Board
+setbigstate	board.cpp	/^void Board::setbigstate(const int &row, const int &col , const int8_t color){$/;"	f	class:Board
+setstate	board.cpp	/^void Board::setstate(const int &row, const int &col , const int8_t color){$/;"	f	class:Board
+setting	ultimateTTT.cpp	/^void TTTBot::setting(std::string &key, std::string &value) {$/;"	f	class:TTTBot
+split	utils.cpp	/^std::vector<std::string> split(const std::string &s, char delim) {$/;"	f
+time_per_move	ultimateTTT.h	/^	int time_per_move;$/;"	m	class:TTTBot
+timebank	ultimateTTT.h	/^	int timebank;$/;"	m	class:TTTBot
+unmake_move	gameState.cpp	/^bool GameState::unmake_move(Move m){$/;"	f	class:GameState
+update	ultimateTTT.cpp	/^void TTTBot::update(std::string &key, std::string &value) {$/;"	f	class:TTTBot
+valid	ttable_entry.h	/^    bool valid;$/;"	m	class:TTableEntry
+value	ttable_entry.h	/^    int value;$/;"	m	class:TTableEntry
+winning_move	utils.cpp	/^Move winning_move(const MiniState &mini, const int &color){$/;"	f
+x	move.h	/^		int8_t x;$/;"	m	class:Move
+y	move.h	/^		int8_t y;$/;"	m	class:Move
+your_bot	ultimateTTT.h	/^	std::string your_bot;$/;"	m	class:TTTBot
+your_botid	ultimateTTT.h	/^	int your_botid;$/;"	m	class:TTTBot
+~Board	board.cpp	/^Board::~Board(){$/;"	f	class:Board
